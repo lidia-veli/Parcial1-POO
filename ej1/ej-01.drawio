@@ -1,0 +1,61 @@
+<mxfile host="65bd71144e">
+    <diagram id="z9bSB5tBgr-KjvTVp4J5" name="Page-1">
+        <mxGraphModel dx="576" dy="424" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="EClasifLibros" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="80" width="260" height="226" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;div&gt;Científicos&lt;/div&gt;&lt;div&gt;Literatura y lingüísticos&lt;/div&gt;&lt;div&gt;De viaje&lt;/div&gt;&lt;div&gt;Biografías&lt;/div&gt;&lt;div&gt;Libro de texto&lt;/div&gt;&lt;div&gt;Libros de gran formato (coffee table book)&lt;/div&gt;&lt;div&gt;De referencia o consulta&lt;/div&gt;&lt;div&gt;Monografías&lt;/div&gt;&lt;div&gt;Recreativos&lt;/div&gt;&lt;div&gt;Poéticos&lt;/div&gt;&lt;div&gt;Juveniles&lt;/div&gt;&lt;div&gt;Ficción&lt;/div&gt;&lt;div&gt;Comedia&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="6" vertex="1">
+                    <mxGeometry y="26" width="260" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Persona" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="80" width="260" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="- nombre : str&#10;- apellido : str&#10;- id (DNI, pasaporte...) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="15" vertex="1">
+                    <mxGeometry y="26" width="260" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="15" vertex="1">
+                    <mxGeometry y="90" width="260" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="leer(b:Libro)&#10;colocar_en_estanteria(b:Libro)&#10;prestar(b:Libro) : Persona" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="15" vertex="1">
+                    <mxGeometry y="98" width="260" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.493;entryY=1.06;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="18" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="355" y="370" as="sourcePoint"/>
+                        <mxPoint x="190" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="" style="endArrow=none;dashed=1;html=1;entryX=0.522;entryY=1.022;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="13" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="484.9999999999998" y="438" as="sourcePoint"/>
+                        <mxPoint x="440" y="250" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="656" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="340" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="1..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="276" width="20" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="370" width="230" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="- título : str&#10;- autor : Persona&#10;- ISBN : int&#10;- paginas : int&#10;- clasificacion : tipo from EClasifLibros&#10;- propietario : Persona" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="25" vertex="1">
+                    <mxGeometry y="26" width="230" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="25" vertex="1">
+                    <mxGeometry y="130" width="230" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="__str__  # gettertitulo, autor&#10;__long__  # getter paginas&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="25" vertex="1">
+                    <mxGeometry y="138" width="230" height="52" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
