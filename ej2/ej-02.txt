@@ -1,0 +1,4 @@
+Sería posible implementar estos objetos en python, pero sería muy complicado porque en la naturaleza 
+hay muchas excepciones, como el caso del ornitorrinco, que es un mamífero, pero no es vivíparo, ya que pone huevos (ovíparo) 
+y no tiene glándulas mamarias. Por lo tanto utilizar los conceptos de herencia en python sería muy complicado, 
+y no se podría implementar de manera correcta.
