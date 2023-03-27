@@ -29,7 +29,7 @@ class PlazoFijo(CuentaBancaria):
     
     #método heredado
     def ingresar(self, importe): # igual que la clase padre
-        return super().ingresar(importe)
+        super().ingresar(importe)
     
     #método modificado
     def retirar(self, importe, fecha_actual):
@@ -54,7 +54,7 @@ class CuentaVIP(CuentaBancaria):
     
     #método heredado
     def ingresar(self, importe):
-        return super().ingresar(importe)
+        super().ingresar(importe)
     
     #método modificado
     def retirar(self, importe):
