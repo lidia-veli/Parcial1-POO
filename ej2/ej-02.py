@@ -1,8 +1,6 @@
 class Animal:
-    def __init__(self, eucariota, heterotrofo, multicelular):
-        self.eucariota = eucariota
-        self.heterotrofo = heterotrofo
-        self.multicelular = multicelular
+    celulas = 'eucariota'
+    organismo = 'multicelular'
 
     def moverse(self):
         print("Me puedp mover")
@@ -15,11 +13,8 @@ class Animal:
 
 
 class Viviparo(Animal):
-    def __init__(self, eucariota, heterotrofo, multicelular, vientre):
-        # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular)
-        #nuevos atributos
-        self.gestacion = vientre
+    def __init__(self, vientre):
+        self.gestacion = vientre #nuevos atributos
     
     # métodos heredados
     def moverse(self):
@@ -37,11 +32,8 @@ class Viviparo(Animal):
 
 
 class Oviparo(Animal):
-    def __init__(self, eucariota, heterotrofo, multicelular, huevo):
-        # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular)
-        #nuevos atributos
-        self.gestacion = huevo
+    def __init__(self, huevo):
+        self.gestacion = huevo  #nuevos atributos
     
     # métodos heredados
     def moverse(self):
@@ -59,9 +51,9 @@ class Oviparo(Animal):
 
 
 class Mamifero(Viviparo):
-    def __init__(self, eucariota, heterotrofo, multicelular, vientre, mamas):
+    def __init__(self, vientre, mamas):
         # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular, vientre)
+        super().__init__(vientre)
         #nuevos atributos
         self.mamas = mamas
     
@@ -84,9 +76,9 @@ class Mamifero(Viviparo):
 
 
 class Gato(Mamifero):
-    def __init__(self, eucariota, heterotrofo, multicelular, vientre, mamas, pelo):
+    def __init__(self, vientre, mamas, pelo):
         # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular, vientre, mamas)
+        super().__init__(vientre, mamas)
         #nuevos atributos
         self.pelo = pelo
     
@@ -111,9 +103,9 @@ class Gato(Mamifero):
         print('Miau miau')
 
 class Ornitorrinco(Oviparo):
-    def __init__(self, eucariota, heterotrofo, multicelular, huevo, pico):
+    def __init__(self, huevo, pico):
         # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular, huevo)
+        super().__init__(huevo)
         #nuevos atributos
         self.pico = pico
     
@@ -135,9 +127,9 @@ class Ornitorrinco(Oviparo):
         print('Puedo picar a mis enemigos')
 
 class Pollo(Oviparo):
-    def __init__(self, eucariota, heterotrofo, multicelular, huevo, pico):
+    def __init__(self, huevo, pico):
         # atributos heredados
-        super().__init__(eucariota, heterotrofo, multicelular, huevo)
+        super().__init__(huevo)
         #nuevos atributos
         self.pico = pico
     
